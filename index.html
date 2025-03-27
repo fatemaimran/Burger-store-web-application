@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Burger Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to Burger Shop, the best place to enjoy delicious and juicy burgers made with the finest ingredients.</p>
+            <img src="https://cdn.pixabay.com/photo/2023/04/14/19/09/ai-generated-7925774_640.jpg" alt="Burger Shop" class="hero-image">
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Burger Shop, we are passionate about crafting the best burgers in town. With fresh ingredients and secret sauces, we bring you flavors that you'll love.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-container" id="menu-items">
+                <!-- Menu items will be loaded dynamically -->
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <div id="cart-empty">
+                <p>Your cart is empty</p>
+            </div>
+            <div id="cart-content" style="display: none;">
+                <ul id="cart-items"></ul>
+                <p>Total: Rs<span id="total">0.00</span></p>
+                
+                <div class="checkout-form">
+                    <h3>Customer Information</h3>
+                    <form id="customer-form">
+                        <div class="form-group">
+                            <label for="customer-name">Name:</label>
+                            <input type="text" id="customer-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-email">Email:</label>
+                            <input type="email" id="customer-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-address">Address:</label>
+                            <input type="text" id="customer-address" required>
+                        </div>
+                        <button type="button" id="checkout-btn">Checkout</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@burgershop.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 Burger Street, Food City</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Burger Shop</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
